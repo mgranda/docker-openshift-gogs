@@ -305,8 +305,8 @@ parameters:
   value: 12MB
 - name: GOGS_VERSION
   displayName: Gogs Version
-  description: 'Version of the Gogs container image to be used (0.9.97 or 0.9.113)'
-  value: "0.9.97"
+  description: 'Version of the Gogs container image to be used'
+  value: "latest"
   required: true
 - name: INSTALL_LOCK
   displayName: Installation lock

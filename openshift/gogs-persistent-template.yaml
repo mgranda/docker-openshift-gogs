@@ -363,5 +363,5 @@ parameters:
 - name: GOGS_VERSION
   displayName: Gogs Image Version Tag
   description: The tag for the Gogs Image to use
-  value: "11.4"
+  value: "latest"
   required: true
