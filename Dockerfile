@@ -3,7 +3,7 @@ MAINTAINER Wolfgang Kulhanek <WolfgangKulhanek@gmail.com>
 
 # Set the Gogs Version to install.
 # Check https://dl.gogs.io/ for available versions.
-ENV GOGS_VERSION="0.11.34"
+ENV GOGS_VERSION="0.11.43"
 
 LABEL name="Gogs - Go Git Service" \
       vendor="Gogs" \
@@ -11,7 +11,7 @@ LABEL name="Gogs - Go Git Service" \
       io.k8s.description="The goal of this project is to make the easiest, fastest, and most painless way of setting up a self-hosted Git service." \
       io.openshift.expose-services="3000,gogs" \
       io.openshift.tags="gogs" \
-      build-date="2017-11-29" \
+      build-date="2018-04-06" \
       version=$GOGS_VERSION \
       release="1"
 
