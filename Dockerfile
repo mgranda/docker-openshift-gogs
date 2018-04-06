@@ -23,11 +23,13 @@ LABEL name="Gogs - Go Git Service" \
 RUN yum -y update && yum -y upgrade \
     && yum -y install epel-release \
     && yum -y install git nss_wrapper \
-    && yum -y clean all \
-    && adduser gogs \
-    && curl -L -o /tmp/gogs.tar.gz https://dl.gogs.io/$GOGS_VERSION/linux_amd64.tar.gz \
-    && tar -xzf /tmp/gogs.tar.gz -C /opt \
-    && rm /tmp/gogs.tar.gz
+    && yum -y clean all 
+
+RUN adduser gogs \
+    && curl -L -o /tmp/gogs.tar.gz https://dl.gogs.io/${GOGS_VERSION}/gogs_${GOGS_VERSION}_linux_amd64.tar.gz \
+    && gunzip /tmp/gogs.tar.gz \
+    && tar -xf /tmp/gogs.tar -C /opt \
+    && rm /tmp/gogs.tar
 
 COPY ./root /
 RUN mkdir /data \
