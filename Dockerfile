@@ -11,7 +11,7 @@ LABEL name="Gogs - Go Git Service" \
       io.k8s.description="The goal of this project is to make the easiest, fastest, and most painless way of setting up a self-hosted Git service." \
       io.openshift.expose-services="3000,gogs" \
       io.openshift.tags="gogs" \
-      build-date="2018-10-13" \
+      build-date="2018-12-05" \
       version=$GOGS_VERSION \
       release="1"
 
